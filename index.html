@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de probabilidades</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <meta name="description" content="App para calcular la probabilidad de ganar en la ruleta, Bryan Hidalgo">
+      
+</head>
+
+<body>
+    <div class="div-1">
+        <label for="numberOfSlotsInput">Número de casillas (Lados de la ruleta):</label>
+        <input type="number" id="numberOfSlotsInput" placeholder="Número de casillas">
+    </div>
+    <div class="div-1">
+        <label for="numberOfTurnsInput">Número de giros (Personas que vamos):</label>
+        <input type="number" id="numberOfTurnsInput" placeholder="Número de giros">
+    </div>
+    <div class="div-1">
+        <button id="calculateButton">Calcular probabilidad</button>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Giro</th>
+                    <th>Número elegido</th>
+                    <th>Probabilidad de ganar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Probabilidad total:</td>
+                    <td id="totalProbability"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./assets/index.js"></script>
+</body>
+<style>
+    *{
+        font-size: 40px;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    input{
+        height: 110px;
+
+    }
+    .div-1 {
+        width: 50%;
+
+    }
+</style>
+
+</html>
